@@ -37,15 +37,7 @@ public class FlightBuilder {
         for (int i = 0; i < (dates.length - 1); i += 2) {
             segments.add(new Segment(dates[i], dates[i + 1]));
         }
-//        List<Segment> seg = segments.parallelStream().distinct().
-//                filter(arr -> arr.getArrivalDate() != null).
-//                filter(dep -> dep.getDepartureDate() != null).
-//                filter(segment -> segment.getDepartureDate().isBefore(segment.getArrivalDate())).
-//                reduce(segments, (segment, segment2) ->
-//                {if ((segment.getArrivalDate().isAfter(segment2.getDepartureDate().minusHours(2))) ||
-//                        (segment.getArrivalDate().isEqual(segment2.getDepartureDate().minusHours(2))))
-//                    return segment2;
-//                });
+
 
 //        System.out.println(segments.toString());
         return new Flight(segments);
